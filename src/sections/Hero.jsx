@@ -37,7 +37,20 @@ const Hero = () => {
               <span className='w-2 h-2 bg-primary rounded-full animate-pulse'/>
               Software Engineer . React Specialist
             </span>
-            
+          </div>
+
+          {/* Headline */}
+
+          <div>
+            <h1>
+              Crafting <span className='text-primary glow-text'>digital</span>
+              <br/>
+              experience with
+              <br/>
+              <span className='font-serif italic font-normal text-white'>
+                precision
+              </span>
+            </h1>
           </div>
         </div>
 
