@@ -20,8 +20,29 @@ const Hero = () => {
             background: "#20B2A6",
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
+            animation: `slow-drift ${20 + Math.random() * 30}s ease-in-out infinite`,
+            animationDelay: `${Math.random() * 5}s`,
         }}/>
       ))}
+    </div>
+    {/* Content */}
+
+    <div className='container mx-auto px-6 pt-32 pb-20 relative z-10'>
+      <div className='grid lg:grid-cols-2 gap-12 items-center'>
+
+        {/* Left Column - Text content */}
+        <div className='space-y-8'>
+          <div className='animate-fade-in'>
+            <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary'>
+              <span className='w-2 h-2 bg-primary rounded-full animate-pulse'/>
+              Software Engineer . React Specialist
+            </span>
+            
+          </div>
+        </div>
+
+        {/* right column - profile image*/}
+      </div>
     </div>
     </section>
   )
