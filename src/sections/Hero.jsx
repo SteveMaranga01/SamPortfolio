@@ -138,7 +138,7 @@ const Hero = () => {
               </div>
 
               {/* stats Badge */}
-              <div className='absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animation-dalay-300'>
+              <div className='absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float'>
                 <div className='text-2xl font-bold text-primary'>5+</div>
                 <div className='text-xs text-muted-foreground'>Years Exp.</div>
               </div>
