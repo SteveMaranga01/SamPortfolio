@@ -11,7 +11,7 @@ const highlights = [
   },
   {
     icon: Rocket,
-    title: "Perfomance",
+    title: "Performance",
     description: "Optimizing for speed and delivering lightning-fast user experiences.",
   },
   {
@@ -29,12 +29,12 @@ const highlights = [
 const About = () => {
   return (
     <section id='about' className='py-32 relative overflow-hidden'>
-      <div className='conatiner mx-auto px-6 relative z-10'>
+      <div className='container mx-auto px-6 relative z-10'>
         <div className='grid lg:grid-cols-2 gap-16 items-center'>
 
           {/* left Column*/}
 
-          <div className='space-yy8'>
+          <div className='space-y-8'>
             <div className='animate-fade-in'>
               <span className='text-secondary-foreground text-sm font-medium tracking-wider uppercase'>About Me</span>
             </div>
@@ -65,6 +65,32 @@ const About = () => {
                 the developer community.
               </p>
             </div>
+
+            <div className='glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300'>
+              <p className='text-lg font-medium italic text-foreground'>
+                "My mission is to create digital experiences that are not just 
+                functional, but truly delightful - products that users love to
+                use and developers love to maintain."
+              </p>
+            </div>
+          </div>
+
+          {/*Right Column - Hilights */}
+
+          <div className='grid sm:grid-cols-2 gap-6'>
+            {highlights.map((items, idx) =>(
+              <div 
+              key={idx} 
+              className='glass p-6 rounded-2xl animate-fade-in'
+              style={{animationDelay:`${(idx + 1) * 100}ms`}}
+              >
+                <div className='w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20'>
+                  <items.icon className='w-6 h-6 text-primary' />
+                </div>
+                <h3 className='text-lg font-semibold mb-2'>{items.title}</h3>
+                <p className='text-sm text-muted-foreground'>{items.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
