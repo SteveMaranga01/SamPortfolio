@@ -1,4 +1,8 @@
-import React from 'react'
+import React from 'react';
+import {ArrowRight, Download, Facebook, Github, Instagram, Twitter} from 'lucide-react';
+import Button from '@/Comps/Button';
+import {AnimatedBorderButton} from '@/Comps/AnimatedBorderButton'
+
 
 const Hero = () => {
   return (
@@ -41,8 +45,8 @@ const Hero = () => {
 
           {/* Headline */}
 
-          <div>
-            <h1>
+          <div className='space-y-4'>
+            <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100'>
               Crafting <span className='text-primary glow-text'>digital</span>
               <br/>
               experience with
@@ -51,6 +55,40 @@ const Hero = () => {
                 precision
               </span>
             </h1>
+            <p className='text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200'>
+              Hi, I'm Samuel Junior Magori- a software engineer specializing in
+              React, Next.js, and Typescript. i bring scalable, performant web 
+              applications that users love 
+            </p>
+          </div>
+
+          {/* CTAs */}
+
+          <div className='flex flex-wrap gap-4 animate-fade-in animation-delay-300'>
+            <Button size="lg">
+              Contact Me<ArrowRight className='w-5 h-5'/>
+              </Button>
+              <AnimatedBorderButton/>
+          </div>
+
+          {/* social links*/}
+
+          <div className='flex items-center gap-2 animate-fade-in animation-delay-400'>
+            <span className='text-sm text-muted-foreground'>Follow:</span>
+            {[
+              {icon:Github, href:"#"},
+              {icon:Instagram, href:"#"},
+              {icon:Facebook, href:"#"},
+              {icon:Twitter, href:"#"},
+            ].map((social, idx)=>(
+              <a
+               key={idx} 
+               href={social.href}
+               className='p-2 rounded-full glass hover:bg-primary/10 hover:text-primary'
+               >
+                {<social.icon/>}
+              </a>
+            ))}
           </div>
         </div>
 
