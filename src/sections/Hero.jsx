@@ -170,7 +170,7 @@ const Hero = () => {
     animate-fade-in animation-delay-800'>
       <a 
       href='#about' 
-      className='flex flex-col items-center gap-2 text-muted-foreground'
+      className='flex flex-col items-center gap-2 text-muted-foreground hover:text-primary'
       >
         <span className='text-xs uppercase tracking-wider'>Scroll</span>
         <ChevronDown className='w-6 h-6 animate-bounce'/>
