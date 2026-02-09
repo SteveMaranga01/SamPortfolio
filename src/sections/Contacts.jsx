@@ -51,7 +51,29 @@ const Contacts = () => {
           </p>
         </div>
 
-        
+        <div>
+          <div>
+            <form>
+
+              <div>
+                <lable>Name</lable>
+                <input/>
+              </div>
+
+              <div>
+                <lable>Email</lable>
+                <input/>
+              </div>
+
+              <div>
+                <lable></lable>
+                <input/>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
       </div>
    </section>
   )
