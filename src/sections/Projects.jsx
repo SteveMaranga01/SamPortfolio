@@ -1,5 +1,6 @@
 import { ArrowUpRight, Github } from 'lucide-react';
 import React from 'react'
+import {AnimatedBorderButton} from '@/Comps/AnimatedBorderButton';
 
 const projects = [
   {
@@ -125,8 +126,11 @@ const Projects = () => {
 
         {/* view All CTA */}
 
-        <div>
-          <AnimatedBorderButton
+        <div className='text-center mt-12 animate-fade-in animation-delay-500'>
+          <AnimatedBorderButton>
+              View All Project
+            <ArrowUpRight className="w-5 h-5"/>
+          </AnimatedBorderButton>
         </div>
       </div>
 
