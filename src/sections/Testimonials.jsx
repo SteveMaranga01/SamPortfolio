@@ -95,13 +95,13 @@ const Testimonials = () => {
 
               <div className='flex items-center gap-4'>
                 <img 
-                  src={testimonials[0].avatar}
-                  alt={testimonials[0].author}
+                  src={testimonials[activeIdx].avatar}
+                  alt={testimonials[activeIdx].author}
                   className='w-14 h-14 rounded-full object-cover ring-2 ring-primary/20'
                 />
                 <div>
-                  <div className='font-semibold'>{testimonials[0].author}</div>
-                  <div className='text-sm text-muted-foreground'>{testimonials[0].role}</div>
+                  <div className='font-semibold'>{testimonials[activeIdx].author}</div>
+                  <div className='text-sm text-muted-foreground'>{testimonials[activeIdx].role}</div>
                 </div>
               </div>
             </div>
@@ -115,7 +115,9 @@ const Testimonials = () => {
 
               <div className='flex gap-2'>
                 {testimonials.map((_, idx) => (
-                <button className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === 0 ? 
+                <button 
+                onClick={() => setActiveIdx(idx)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === activeIdx ? 
                   "w-8 bg-primary" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"}`}/>
               ))}
               </div>
