@@ -6,6 +6,7 @@ import Contacts from '@/sections/Contacts'
 import Experience from '@/sections/Experience'
 import Projects from '@/sections/Projects'
 import Testimonials from '@/sections/Testimonials'
+import { Footer } from '@/sections/footer'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Projects />
         <Testimonials />
         <Contacts />
+        <Footer/>
       </main>
     </div>
   )
