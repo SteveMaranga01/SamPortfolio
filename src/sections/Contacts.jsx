@@ -7,19 +7,19 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "pedro@example.com",
-    href: "mailto:pedro@example.com",
+    value: "nduguuhsam086@gmail.com",
+    href: "mailto:nduguuhsam086@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "+254 757 797801",
+    href: "tel:+254757797801",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "Nairobi, Kenya",
     href: "#",
   },
 ];
