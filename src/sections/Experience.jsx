@@ -1,4 +1,7 @@
 import React from 'react'
+import {motion} from 'framer-motion';
+import { fadeIn } from '@/assets/motion';
+
 
 const experiences = [
   {
@@ -54,7 +57,13 @@ const Experience = () => {
       <div className='container mx-auto px-6 relative z-10'>
 
         {/*section*/}
-        <div className='max-w-3xl mb-16'>
+        <motion.div 
+         variants={fadeIn('right', 0.4)} 
+          initial="hidden"
+          whileInView="show"
+        
+        
+        className='max-w-3xl mb-16'>
           <span
           className='text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in'
           >
@@ -73,11 +82,16 @@ const Experience = () => {
             A timeline of professional growth, from curious beginner to 
             senior engineer leading teams and building products at scale.
           </p>
-        </div>
+        </motion.div>
 
         {/* Timeline */}
 
-        <div className='relative'>
+        <motion.div 
+         variants={fadeIn('down', 0.5)} 
+          initial="hidden"
+          whileInView="show"
+        
+        className='relative'>
           <div className='timeline-glow absolute left-0 md:left-1/2 top-0 bottom-0 
           w-[2px] bg-gradient-to-b from-primary/70 via-primary/30 to-transparent 
           md:-translate-x-1/2 shadow-[0_0_25px_rgba(32,178,166,0.8)]'/>
@@ -121,7 +135,7 @@ const Experience = () => {
             ))}
           </div>
 
-        </div>
+        </motion.div>
       </div>
 
     </section>

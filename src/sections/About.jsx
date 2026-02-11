@@ -1,5 +1,7 @@
 import { Code2, Lightbulb, Rocket, Users } from 'lucide-react'
 import React from 'react'
+import {motion} from 'framer-motion';
+import { fadeIn } from '@/assets/motion';
 
 
 
@@ -34,7 +36,12 @@ const About = () => {
 
           {/* left Column*/}
 
-          <div className='space-y-8'>
+          <motion.div 
+            variants={fadeIn('right', 0.4)} 
+            initial="hidden"
+            whileInView="show"
+          
+          className='space-y-8'>
             <div className='animate-fade-in'>
               <span className='text-secondary-foreground text-sm font-medium tracking-wider uppercase'>About Me</span>
             </div>
@@ -73,11 +80,16 @@ const About = () => {
                 use and developers love to maintain."
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/*Right Column - Hilights */}
 
-          <div className='grid sm:grid-cols-2 gap-6'>
+          <motion.div 
+          variants={fadeIn('left', 0.4)} 
+          initial="hidden"
+          whileInView="show"
+          
+          className='grid sm:grid-cols-2 gap-6'>
             {highlights.map((items, idx) =>(
               <div 
               key={idx} 
@@ -91,7 +103,7 @@ const About = () => {
                 <p className='text-sm text-muted-foreground'>{items.description}</p>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

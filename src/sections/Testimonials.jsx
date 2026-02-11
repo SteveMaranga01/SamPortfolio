@@ -1,10 +1,12 @@
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import {motion} from 'framer-motion';
+import { fadeIn } from '@/assets/motion';
 
 const testimonials = [
   {
     quote:
-      "Pedro is one of the most talented engineers I've worked with. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
+      "Sam is one of the most talented engineers I've worked with. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
     author: "Sarah Chen",
     role: "CTO, Tech Innovators Inc.",
     avatar:
@@ -12,7 +14,7 @@ const testimonials = [
   },
   {
     quote:
-      "Working with Pedro was a game-changer for our project. He delivered ahead of schedule with code quality that set a new standard for our team.",
+      "Working with Sam was a game-changer for our project. He delivered ahead of schedule with code quality that set a new standard for our team.",
     author: "Michael Rodriguez",
     role: "Product Manager, Digital Solutions",
     avatar:
@@ -20,7 +22,7 @@ const testimonials = [
   },
   {
     quote:
-      "Pedro's expertise in React and TypeScript helped us rebuild our entire frontend in record time. His architectural decisions continue to pay dividends.",
+      "Sam's expertise in React and TypeScript helped us rebuild our entire frontend in record time. His architectural decisions continue to pay dividends.",
     author: "Emily Watson",
     role: "Engineering Lead, StartUp Labs",
     avatar:
@@ -28,7 +30,7 @@ const testimonials = [
   },
   {
     quote:
-      "Not only is Pedro technically brilliant, but he's also a fantastic communicator and team player. He elevated everyone around him.",
+      "Not only is Sam technically brilliant, but he's also a fantastic communicator and team player. He elevated everyone around him.",
     author: "David Kim",
     role: "CEO, Innovation Hub",
     avatar:
@@ -50,7 +52,12 @@ const Testimonials = () => {
       <div className='absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-primary/5 
       rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2'
       />
-      <div className='container mx-auto px-6 relative z-10'>
+      <motion.div 
+      variants={fadeIn('down', 0.4)} 
+      initial="hidden"
+      whileInView="show"
+      
+      className='container mx-auto px-6 relative z-10'>
 
         {/* Section header */}
 
@@ -91,7 +98,7 @@ const Testimonials = () => {
               <div className='absolute -top-4 left-8 w-12 h-12 rounded-full bg-primary flex items-center justify-center'>
                 <Quote className='w-6 h-6 text-primary-foreground'/>
               </div>
-              <blockquote className='text-xl md:text-2xl font-medium leading-relaxed mb-8 pt-4'>"{testimonials[0].quote}"</blockquote>
+              <blockquote className='text-xl md:text-2xl font-medium leading-relaxed mb-8 pt-4'>"{testimonials[activeIdx].quote}"</blockquote>
 
               <div className='flex items-center gap-4'>
                 <img 
@@ -128,7 +135,7 @@ const Testimonials = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }

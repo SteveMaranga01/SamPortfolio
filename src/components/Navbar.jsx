@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Button from '@/Comps/Button';
 import { Menu, X } from 'lucide-react'; 
+import {motion} from 'framer-motion';
+import { fadeIn } from '../assets/motion';
 
 const navLinks = [
     {href: '#about', label: 'About'},
@@ -23,7 +25,13 @@ const Navbar = () => {
     },[]);
   return (
     <header className={`fixed top-0 left-0  right-0 transition-all duration-500 ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} z-50`}>
-        <nav className='container mx-auto px-6 flex items-center justify-between'>
+        <motion.nav 
+        variants={fadeIn('down', 0.2)} 
+        initial="hidden"
+        whileInView="show"
+        viewport={{once: true}}
+        
+        className='container mx-auto px-6 flex items-center justify-between'>
             <a href='#' className='text-xl font-bold tracking-tight hover:text-primary'>
                 SM<span className='text-primary'>.</span>
             </a>
@@ -44,8 +52,13 @@ const Navbar = () => {
 
             {/* CTA Button */}
 
-            <div className='hidden md:block'>
-                <Button size="sm">Contact Me</Button>
+            <div className='hidden md:block' >
+                <Button size="sm">
+                    <a href= "#contact">
+                        Contact Me
+                    </a>
+                    
+                </Button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -53,7 +66,7 @@ const Navbar = () => {
             <button className='md:hidden p-2 text-foreground' onClick={() => setIsMobileMenuOpen((prev) => !prev)}>
                 {isMobileMenuOpen ? <X size={24} /> : <Menu size={24}/>}
             </button>
-        </nav>
+        </motion.nav>
 
           {/* Mobile Menu */}
 

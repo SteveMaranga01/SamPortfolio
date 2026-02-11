@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import Button  from "@/Comps/Button";
-import emailjs from "@emailjs/browser"
+import emailjs from "@emailjs/browser";
+import {motion} from 'framer-motion';
+import { fadeIn } from '@/assets/motion';
 
 const contactInfo = [
   {
@@ -87,7 +89,12 @@ const Contacts = () => {
 
         {/* Section Header */}
         
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <motion.div 
+          variants={fadeIn('down', 0.3)} 
+          initial="hidden"
+          whileInView="show"
+        
+        className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
             Get In Touch
           </span>
@@ -101,10 +108,16 @@ const Contacts = () => {
             Have a project in mind? I'd love to hear about it. Send me a message
             and let's discuss how we can work together.
           </p>
-        </div>
+        </motion.div>
 
         <div className='grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto'>
-          <div className='glass p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300'>
+          <motion.div 
+            variants={fadeIn('right', 0.4)} 
+            initial="hidden"
+            whileInView="show"
+          
+          
+          className='glass p-8 rounded-3xl border border-primary/30 '>
             <form className='space-y-6'onSubmit={handleSubmit}>
 
               <div>
@@ -194,9 +207,17 @@ const Contacts = () => {
                 </div>
               )}
             </form>
-          </div>
+          </motion.div>
+
           {/* Contact Info */}
-          <div className="space-y-6 animate-fade-in animation-delay-400">
+
+          <motion.div 
+            variants={fadeIn('left', 0.5)} 
+            initial="hidden"
+            whileInView="show"
+          
+          
+          className="space-y-6 ">
             <div className="glass rounded-3xl p-8">
               <h3 className="text-xl font-semibold mb-6">
                 Contact Information
@@ -234,7 +255,7 @@ const Contacts = () => {
                 let's talk!
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
 
       </div>

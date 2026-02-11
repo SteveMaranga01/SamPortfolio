@@ -1,6 +1,8 @@
 import { ArrowUpRight, Github } from 'lucide-react';
 import React from 'react'
 import {AnimatedBorderButton} from '@/Comps/AnimatedBorderButton';
+import {motion} from 'framer-motion';
+import { fadeIn } from '@/assets/motion';
 
 const projects = [
   {
@@ -53,7 +55,12 @@ const Projects = () => {
 
         {/* Section Header*/}
 
-        <div className='text-center mx-auto max-w-3xl mb-16'>
+        <motion.div 
+        variants={fadeIn('down', 0.4)} 
+        initial="hidden"
+        whileInView="show"
+      
+        className='text-center mx-auto max-w-3xl mb-16'>
           <span className='text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in'>Featured Work</span>
           <h2 className='text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground'>
             Projects that
@@ -66,11 +73,18 @@ const Projects = () => {
             A selection of my recent work, from complex web applications to
             innovative tools that solve real-world problems.
           </p>
-        </div>
+        </motion.div>
 
         {/* Projects Grid */}
 
-        <div className='grid md:grid-cols-2 gap-8'>
+        <motion.div 
+        variants={fadeIn('up', 0.5)} 
+        initial="hidden"
+        whileInView="show"
+        
+        
+        
+        className='grid md:grid-cols-2 gap-8'>
           {projects.map((project, idx) =>(
             <div key={idx} className='group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1'>
 
@@ -122,7 +136,7 @@ const Projects = () => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
 
         {/* view All CTA */}
 

@@ -124,7 +124,7 @@ const Hero = () => {
             <span className='text-sm text-muted-foreground'>Follow:</span>
             {[
               {icon:Github, href:"#"},
-              {icon:Instagram, href:"#"},
+              {icon:Instagram, href:"https://www.instagram.com/_officialbraindrainke?utm_source=qr&igsh=MWt0bnAxYWcycm5rbg=="},
               {icon:Facebook, href:"#"},
               {icon:Twitter, href:"#"},
             ].map((social, idx)=>(
