@@ -34,7 +34,7 @@ const Hero = () => {
       {/*Bg*/}
 
     <div className='absolute inset-0'>
-      <img src="/hero-bg.jpg" alt='Hero Image'
+      <img src={`${import.meta.env.BASE_URL}/hero-bg.jpg`} alt='Hero Image'
       className='w-full h-full object-cover opacity-40'/>
       <div className='absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background'></div>
     </div>
@@ -157,7 +157,7 @@ const Hero = () => {
         
             
               className='relative glass rounded-3xl p-2 glow-border'>
-              <img src='/sam.jpg' alt='Sam profile picture' className='w-full aspect-[4/5] object-cover rounded-2xl'/>
+              <img src={`${import.meta.env.BASE_URL}/sam.jpg`} alt='Sam profile picture' className='w-full aspect-[4/5] object-cover rounded-2xl'/>
 
               {/* Floating Badge*/}
 
