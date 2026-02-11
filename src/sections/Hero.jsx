@@ -2,6 +2,8 @@ import React from 'react';
 import {ArrowRight, ChevronDown, Download, Facebook, Github, Instagram, Twitter} from 'lucide-react';
 import Button from '@/Comps/Button';
 import {AnimatedBorderButton} from '@/Comps/AnimatedBorderButton'
+import {motion} from 'framer-motion';
+import { fadeIn } from '@/assets/motion';
 
 const skills =[
   'React',
@@ -59,15 +61,25 @@ const Hero = () => {
         {/* Left Column - Text content */}
         <div className='space-y-8'>
           <div className='animate-fade-in'>
-            <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary'>
+            <motion.span 
+            variants={fadeIn('down', 0.3)} 
+            initial="hidden"
+            whileInView="show"
+            
+            className='inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary'>
               <span className='w-2 h-2 bg-primary rounded-full animate-pulse'/>
               Software Engineer . React Specialist
-            </span>
+            </motion.span>
           </div>
 
           {/* Headline */}
 
-          <div className='space-y-4'>
+          <motion.div 
+          variants={fadeIn('right', 0.3)} 
+          initial="hidden"
+          whileInView="show"
+          
+          className='space-y-4'>
             <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100'>
               Crafting <span className='text-primary glow-text'>digital</span>
               <br/>
@@ -82,14 +94,18 @@ const Hero = () => {
               React, Next.js, and Typescript. i bring scalable, performant web 
               applications that users love 
             </p>
-          </div>
+          </motion.div>
 
           {/* CTAs */}
 
           <div className='flex flex-wrap gap-4 animate-fade-in animation-delay-300'>
             <Button size="lg">
-              Contact Me<ArrowRight className='w-5 h-5'/>
-              </Button>
+              <a href= "#contact">
+                  Contact Me
+              </a>
+              <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-all'/>
+            </Button>
+
               <AnimatedBorderButton>
                 <Download className="w-5 h-5"/>
                     Download CV
@@ -98,7 +114,13 @@ const Hero = () => {
 
           {/* social links*/}
 
-          <div className='flex items-center gap-2 animate-fade-in animation-delay-400'>
+          <motion.div 
+            variants={fadeIn('left', 0.3)} 
+            initial="hidden"
+            whileInView="show"
+          
+          
+          className='flex items-center gap-2 animate-fade-in animation-delay-400'>
             <span className='text-sm text-muted-foreground'>Follow:</span>
             {[
               {icon:Github, href:"#"},
@@ -114,7 +136,7 @@ const Hero = () => {
                 {<social.icon/>}
               </a>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* right column - profile image*/}
@@ -128,8 +150,14 @@ const Hero = () => {
             className='absolute inset-0 rounded-3xl bg-gradient-to-br 
             from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse'
             />
-            <div className='relative glass rounded-3xl p-2 glow-border'>
-              <img src='/profile-photo.jpg' alt='Sam profile picture' className='w-full aspect-[4/5] object-cover rounded-2xl'/>
+            <motion.div 
+              variants={fadeIn('left', 0.3)} 
+              initial="hidden"
+              whileInView="show"
+        
+            
+              className='relative glass rounded-3xl p-2 glow-border'>
+              <img src='/sam.jpg' alt='Sam profile picture' className='w-full aspect-[4/5] object-cover rounded-2xl'/>
 
               {/* Floating Badge*/}
 
@@ -146,7 +174,7 @@ const Hero = () => {
                 <div className='text-xs text-muted-foreground'>Years Exp.</div>
               </div>
 
-            </div>
+            </motion.div>
           </div>
 
 
@@ -155,7 +183,12 @@ const Hero = () => {
 
       {/* skills section */}
 
-      <div className='mt-20 animate-fade-in animation-delay-300'>
+      <motion.div 
+      variants={fadeIn('left', 0.3)} 
+      initial="hidden"
+      whileInView="show"
+      
+      className='mt-20 animate-fade-in animation-delay-300'>
         <p className='text-sm text-muted-foreground mb-6 text-center'>Technologies i work with</p>
         <div className='relative overflow-hidden'>
           <div className='flex animate-marquee'>
@@ -166,7 +199,7 @@ const Hero = () => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
 
     <div className='absolute bottom-8 left-1/2 -translate-x-1/2 
