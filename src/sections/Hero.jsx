@@ -28,6 +28,7 @@ const skills =[
 ];
 
 
+
 const Hero = () => {
   return (
     <section className='relative min-h-screen flex items-center overflow-hidden'>
@@ -108,12 +109,18 @@ const Hero = () => {
             </Button>
 
 
-            <a href='/SamPortfolio/Sam CV.pdf' download>
+            <motion.a 
+              variants={fadeIn('up', 0.5)} 
+              initial="hidden"
+              whileInView="show"
+            
+            
+            href='/SamPortfolio/Sam CV.pdf' download>
               <AnimatedBorderButton >
                 <Download className="w-5 h-5"/>
                     Download CV
               </AnimatedBorderButton>
-            </a>
+            </motion.a>
 
           </div>
 
