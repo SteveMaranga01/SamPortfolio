@@ -4,6 +4,7 @@ import Button from '@/Comps/Button';
 import {AnimatedBorderButton} from '@/Comps/AnimatedBorderButton'
 import {motion} from 'framer-motion';
 import { fadeIn } from '@/assets/motion';
+import { FaTiktok } from "react-icons/fa6";
 
 const skills =[
   'React',
@@ -106,10 +107,14 @@ const Hero = () => {
               <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-all'/>
             </Button>
 
-              <AnimatedBorderButton>
+
+            <a href='/SamPortfolio/Sam CV.pdf' download>
+              <AnimatedBorderButton >
                 <Download className="w-5 h-5"/>
                     Download CV
               </AnimatedBorderButton>
+            </a>
+
           </div>
 
           {/* social links*/}
@@ -123,10 +128,10 @@ const Hero = () => {
           className='flex items-center gap-2 animate-fade-in animation-delay-400'>
             <span className='text-sm text-muted-foreground'>Follow:</span>
             {[
-              {icon:Github, href:"#"},
+              {icon:FaTiktok, href:"https://www.tiktok.com/@braindrainke001"},
               {icon:Instagram, href:"https://www.instagram.com/_officialbraindrainke?utm_source=qr&igsh=MWt0bnAxYWcycm5rbg=="},
-              {icon:Facebook, href:"#"},
-              {icon:Twitter, href:"#"},
+              {icon:Facebook, href:"https://web.facebook.com/sam.junior.50309/?_rdc=1&_rdr#"},
+              {icon:Twitter, href:"https://x.com/braindrainke?s=20"},
             ].map((social, idx)=>(
               <a
                key={idx} 
