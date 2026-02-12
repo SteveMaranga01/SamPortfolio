@@ -14,14 +14,14 @@ const Button = React.forwardRef (({ className = '', size = 'md', children, ...pr
 
   return (
     <motion.button 
-    variants={fadeIn('down', 0.4)} 
-    initial="hidden"
-    whileInView="show"
-    
-    type="button" className={classes} {...props} ref={ref}>
-      <span className="relative flex items-center justify-center gap-2">
-        {children}
-      </span>
+      variants={fadeIn('down', 0.4)} 
+      initial="hidden"
+      whileInView="show"
+      
+      type="button" className={classes} {...props} ref={ref}>
+        <span className="relative flex items-center justify-center gap-2">
+          {children}
+        </span>
     </motion.button>
   )
 })
