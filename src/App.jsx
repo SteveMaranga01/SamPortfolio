@@ -7,6 +7,7 @@ import Experience from '@/sections/Experience'
 import Projects from '@/sections/Projects'
 import Testimonials from '@/sections/Testimonials'
 import { Footer } from '@/sections/footer'
+import ScrollToTop from '@/Comps/ScrollToTop'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Testimonials />
         <Contacts />
         <Footer/>
+        <ScrollToTop/>
       </main>
     </div>
   )

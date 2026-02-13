@@ -3,38 +3,40 @@ import React, { useState } from 'react';
 import {motion} from 'framer-motion';
 import { fadeIn } from '@/assets/motion';
 
+const base = import.meta.env.BASE_URL;
+
 const testimonials = [
   {
     quote:
       "Sam is one of the most talented engineers I've worked with. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
-    author: "Sarah Chen",
-    role: "CTO, Tech Innovators Inc.",
+    author: "James Maitai",
+    role: "Group Chief Technology, Safaricom",
     avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+      `${base}Avatar/Maitai_today.png`,
   },
   {
     quote:
       "Working with Sam was a game-changer for our project. He delivered ahead of schedule with code quality that set a new standard for our team.",
-    author: "Michael Rodriguez",
-    role: "Product Manager, Digital Solutions",
+    author: "Nicholas Mulila",
+    role: "Group Chief Risk Officer, Safaricom",
     avatar:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+      `${base}Avatar/mulila2.png`,
   },
   {
     quote:
       "Sam's expertise in React and TypeScript helped us rebuild our entire frontend in record time. His architectural decisions continue to pay dividends.",
-    author: "Emily Watson",
-    role: "Engineering Lead, StartUp Labs",
+    author: "Dilip Pal",
+    role: "Group Chief Finance and Innovation Officer, Safaricom",
     avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
+      `${base}Avatar/pal.png`,
   },
   {
     quote:
       "Not only is Sam technically brilliant, but he's also a fantastic communicator and team player. He elevated everyone around him.",
-    author: "David Kim",
-    role: "CEO, Innovation Hub",
+    author: "Stephen Chege",
+    role: "Group Chief External Affairs Officer, Safaricom",
     avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+      `${base}Avatar/Stevveonsdgandcorporate.png`,
   },
 ];
 
