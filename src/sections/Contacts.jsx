@@ -9,8 +9,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "nduguuhsam086@gmail.com",
-    href: "mailto:nduguuhsam086@gmail.com",
+    value: "samuelmagori475@gmail.com",
+    href: "mailto:samuelmagori475@gmail.com",
   },
   {
     icon: Phone,
@@ -149,7 +149,7 @@ const Contacts = () => {
                 placeholder='Your@email.com'
                 value={formData.email}
                 onChange={(e) =>
-                  setFormData({...formData, name: e.target.value})
+                  setFormData({...formData, email: e.target.value})
                 }
                 className='w-full px-4 py-3 bg-surface rounded-xl 
                 border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all'

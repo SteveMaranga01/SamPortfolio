@@ -169,7 +169,7 @@ const Hero = () => {
         
             
               className='relative glass rounded-3xl p-2 glow-border'>
-              <img src={`${import.meta.env.BASE_URL}/sam.jpg`} alt='Sam profile picture' className='w-full aspect-[4/5] object-cover rounded-2xl'/>
+              <img src={`${import.meta.env.BASE_URL}/Sam.jpg`} alt='Sam profile picture' className='w-full aspect-[4/5] object-cover rounded-2xl'/>
 
               {/* Floating Badge*/}
 

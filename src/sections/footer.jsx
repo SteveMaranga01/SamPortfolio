@@ -20,7 +20,9 @@ export const Footer = () => {
     <footer id="footer" className="py-12 border-t border-border">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+
           {/* Logo & Copyright */}
+
           <div className="text-center md:text-left">
             <a href="#" className="text-xl font-bold tracking-tight">
               SM<span className="text-primary">.</span>
@@ -44,6 +46,7 @@ export const Footer = () => {
           </nav>
 
           {/* Social Links */}
+          
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
               <a
